@@ -24,7 +24,11 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    {
+      "locator": "https://github.com/j3k0/cordova-plugin-purchase.git#b15e9eed3480e85d3c87fd3d1c4dca58d2d163f9",
+      "id": "cc.fovea.cordova.purchase"
+    }
   ],
   "scripts": {
     "ionic": "ionic",
