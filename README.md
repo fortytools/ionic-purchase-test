@@ -16,6 +16,7 @@ It still seems to be en vouge to install packages like ionic and cordova globall
 To circumvent this I add these packages to the packages.json too and include corresponding items in the scripts section that will execute binaries with the versions installed for that project.
 
 ```bash
+$ npm run -- ionic platform add ios
 $ npm run -- ionic plugin add 'https://github.com/j3k0/cordova-plugin-purchase.git#b15e9eed3480e85d3c87fd3d1c4dca58d2d163f9'
 $ npm run -- ionic run ios --device
 ```
