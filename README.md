@@ -23,4 +23,4 @@ $ npm run -- ionic run ios --device
 
 I added a little controller/view to test for the presence of the store object, but it does not get defined ..
 
-![screenshot](/screenshot.jpg?raw=true "store object that should be provided is undefined")
+![screenshot](/screenshot.png?raw=true "store object that should be provided is undefined")
