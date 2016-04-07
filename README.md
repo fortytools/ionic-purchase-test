@@ -1,25 +1,23 @@
-Ionic App Base
-=====================
+Ionic App Base + Purchase Corodova Plugin
+==========================================
 
-A starting project for Ionic that optionally supports using custom SCSS.
+I'm having a real hard time getting this to work. I'm currently stuck at getting the [corodova plugin](https://github.com/j3k0/cordova-plugin-purchase) providing access to the store API to work.
 
-## Using this project
-
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
-
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+I created this minimal setup roughly by executing the following steps:
 
 ```bash
-$ npm install -g ionic
+$ npm run -- ionic start app-root blank
+$ cd app-root
+$ npm install --save ionic
+$ npm install --save corodova
+$ npm install --save deploy-ios
 ```
-
-Then run:
+It still seems to be en vouge to install packages like ionic and cordova globally, which makes it impossible to see in the project code base which versions of theses packages are used in the project.
+To circumvent this I add these packages to the packages.json too and include corresponding items in the scripts section that will execute binaries with the versions installed for that project.
 
 ```bash
-$ ionic start myProject tabs
+$ npm run -- ionic plugin add 'https://github.com/j3k0/cordova-plugin-purchase.git#b15e9eed3480e85d3c87fd3d1c4dca58d2d163f9'
+$ npm run -- ionic run ios --device
 ```
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
-
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+I added a little controller/view to test for the presence of the store object, but it does not get defined ..
