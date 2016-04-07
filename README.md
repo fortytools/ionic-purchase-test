@@ -3,6 +3,12 @@ Ionic App Base + Purchase Corodova Plugin
 
 I'm having a real hard time getting this to work. I'm currently stuck at getting the [corodova plugin](https://github.com/j3k0/cordova-plugin-purchase) providing access to the store API to work.
 
+To try my not working example execute:
+```bash
+npm install
+npm run -- ionic run ios --device
+```
+
 I created this minimal setup roughly by executing the following steps:
 
 ```bash
